@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navpar */
+/* style nav */
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-image: url(../images/hero-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    justify-items: center;
+    background-repeat: inherit;
+}
+
+.navbar nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav .logo {
+    font: caption;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+#droplist {
+    display: none;
+}
+
+.navbar  label {
+    display: none;
+}
+
+.navbar nav ul {
+    display: flex;
+}
+
+.navbar nav ul li {
+    padding: 5px 7px;
+    list-style: none;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 7px;
+}
+
+.navbar nav ul li a:hover {
+    border-bottom: 3px solid red;
+    border-radius: 4px;
+}
+
+@media (max-width:740px) {
+    .navbar  label {
+        display: block;
+        padding-right: 10px;
+    }
+
+    .navbar nav ul {
+        display: none;
+    }
+
+    #droplist:checked~ #drop {
+        display: block;
+        background-color: #221f1fdb;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 15px;
+        text-align: left;
+    }
+    .navbar #drop {
+        display: none;
+        position: absolute;
+        top: 35px;
+        border-bottom: 3px solid #ff0000;
+        animation-name: square;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes square {
+        from {
+            height:15px ;
+        }
+
+        to {
+            height:80vh;
+        }
+    }
+
+}
+
+/* style section WHY CHOOSE US */
+.choose {
+    width: 100%;
+    height: 65vh;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    color: aliceblue;
+    background-image: url(../images/trainer-bg.jpg);
+    background-attachment: fixed;
+    gap: 20px;
+}
+
+.choose .why {
+    display: grid;
+    justify-items: center;
+}
+
+.choose .why h2 {
+    font-size: 40px;
+}
+
+#endLine {
+    width: 70px;
+    height: 5px;
+    margin: 5px 0;
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+.choose .cardes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.choose .cardes .grop {
+    width: 20%;
+}
+
+.choose .cardes .grop h3 {
+    padding: 20px;
+}
+
+/* media section WHY CHOOSE US */
+@media (max-width:740px) {
+    .choose {
+        height: 100vh;
+    }
+
+    .choose .cardes {
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+    }
+
+    .choose .cardes .grop {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width:400px) {
+    .choose {
+        height: 150vh;
+    }
+
+    .choose .cardes {
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+    }
+
+    .choose .why h2 {
+        font-size: 30px;
+    }
+
+}
+
+/* style section HEALTHY MIND */
+.healthy {
+    width: 100%;
+    height: 65vh;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    color: aliceblue;
+    background-image: url(../images/healthy-bg.jpg);
+    background-attachment: fixed;
+}
+
+.healthy p {
+    padding: 30px 5%;
+}
+
+.healthy a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 7px;
+    border: 2px solid aliceblue;
+}
+
+.healthy a:hover {
+    background-color: aliceblue;
+    color: rgb(64, 38, 7);
+}
+
+@media (max-width:400px) {
+    .healthy {
+        height: 85vh;
+    }
+}
+
+/* style section OUR GYM TRAINERS */
+.trainers {
+    width: 100%;
+    height: 85vh;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    color: aliceblue;
+    background-image: url(../images/us-bg.jpg);
+    background-attachment: fixed;
+}
+
+.trainers .lebol {
+    display: grid;
+    justify-items: center;
+}
+
+.trainers .grop {
+    display: flex;
+}
+
+.trainers .grop .card {
+    padding: 0 30px;
+}
+
+.trainers .grop .card h3 {
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.trainers .grop .card .imeg {
+    position: relative;
+}
+
+.trainers .grop .card .imeg img {
+    width: 300px;
+}
+
+.trainers .grop .card .imeg .icon {
+    width: 80%;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    position: absolute;
+    bottom: -24px;
+    left: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+
+.trainers .grop .card .imeg .icon a {
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+/* media section OUR GYM TRAINERS */
+@media (max-width:1100px) {
+    .trainers {
+        height: 140vh;
+    }
+
+    .trainers .grop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trainers .grop .card {
+        padding: 30px;
+    }
+}
+
+@media (max-width:740px) {
+    .trainers {
+        height: 220vh;
+    }
+
+    .trainers .grop {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .trainers .grop .card {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width:400px) {
+    .trainers {
+        height: 165vh;
+    }
+
+    .trainers .grop .card .imeg .icon {
+        width: 80%;
+        height: 30px;
+        bottom: -12px;
+        left: 20px;
+        font-size: 25px;
+    }
+
+    .trainers .grop .card .imeg img {
+        width: 200px;
+    }
+}
+
+/* style swction CONTACT US */
+.contact {
+    background-color: rgb(6 6 57 / 88%);
+    display: flex;
+
+}
+
+.contact .imeg {
+    width: 50%;
+}
+
+.contact .imeg img {
+    width: 100%;
+}
+
+.contact .form {
+    width: 50%;
+    height: 75vh;
+    display: grid;
+    justify-items: center;
+}
+
+.contact form {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-content: space-evenly;
+}
+
+.contact form input {
+    height: 43px;
+    font-size: 20px;
+    display: block;
+    width: 60%;
+}
+
+.contact form h2 {
+    color: aliceblue;
+}
+
+.contact form button {
+    padding: 10px 25px;
+    background-color: red;
+    color: aliceblue;
+
+}
+
+/* media swction CONTACT US */
+@media (max-width:1000px) {
+    .contact {
+        display: block;
+    }
+
+    .contact .imeg {
+        width: 100%;
+    }
+
+    .contact .form {
+        width: 100%;
+    }
+
+    .contact form input {
+        height: 25px;
+        font-size: 14px;
+        width: 80%;
+    }
+}
+
+/* style section footer */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    height: 15vh;
+}
+
+footer div i {
+    font-size: 30px;
+}
+
+/* section footer */
+@media (max-width:400px) {
+    footer {
+        display: grid;
+        height: 40vh;
+    }
+
+    footer div i {
+        font-size: 20px;
+    }
+
+
+}
